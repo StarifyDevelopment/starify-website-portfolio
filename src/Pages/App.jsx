@@ -13,7 +13,7 @@ function App() {
         leftIcon={<FaDiscord size={24} />}
         radius="md"
         size="md"
-        gradient={{ from: "indigo.7", to: "indigo.9", deg: 160 }}
+        gradient={{ from: "indigo.5", to: "indigo.9", deg: 160 }}
       >
         <a href="https://discord.gg/gSj5evjR8S">Discord</a>
       </Button>
