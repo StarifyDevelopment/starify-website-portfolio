@@ -18,7 +18,7 @@ function App() {
       >
         <a href="https://discord.gg/gSj5evjR8S">Discord</a>
       </Button>
-      <Card path="src/assets/snippet.svg" />
+      <Card />
     </>
   );
 }
