@@ -11,19 +11,19 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="socials">
-        <a href="https://www.google.com">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           <FaYoutube size={29} />
         </a>
-        <a href="https://www.google.com">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           <FaInstagram size={29} />
         </a>
-        <a href="https://www.google.com">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           <FaGithub size={29} />
         </a>
-        <a href="https://www.google.com">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           <FaLinkedin size={29} />
         </a>
-        <a href="https://www.google.com">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           <FaDiscord size={29} />
         </a>
       </div>
