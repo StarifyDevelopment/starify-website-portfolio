@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "@mantine/core";
 import { FaDiscord } from "react-icons/fa";
+import Card from "../Components/Common/Card/Card";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       >
         <a href="https://discord.gg/gSj5evjR8S">Discord</a>
       </Button>
+      <Card path="src/assets/snippet.svg" />
     </>
   );
 }

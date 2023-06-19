@@ -1,0 +1,46 @@
+.card {
+  margin-top: 4rem;
+  position: relative;
+  width: 660px;
+  height: 400px;
+  background: url(.png),
+    radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(165, 239, 255, 0.2) 0%,
+      rgba(110, 191, 244, 0.0447917) 77.08%,
+      rgba(70, 144, 213, 0) 100%
+    );
+  background-blend-mode: overlay;
+  backdrop-filter: blur(40px);
+  border-radius: 20px;
+  border: 2px solid #2d3264;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .snippet {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 75%;
+    height: 75%;
+  }
+
+  .three-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    .dot {
+      width: 13.77px;
+      height: 13.77px;
+      border-radius: 50%;
+      background-color: #9097a0;
+    }
+  }
+}
