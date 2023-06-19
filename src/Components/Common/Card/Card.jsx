@@ -1,10 +1,10 @@
 import "./Card.scss";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-function App() {
+function Card(props) {
   return (
     <div className="card">
-      <img className="snippet" src="src/assets/snippet.svg" />
+      <img className="snippet" src={props.path} />
       <div className="three-dots">
         <div className="dot"></div>
         <div className="dot"></div>
@@ -14,8 +14,8 @@ function App() {
   );
 }
 
-// App.propTypes = {
-//   path: PropTypes.string.isRequired,
-// };
+Card.propTypes = {
+  path: PropTypes.string.isRequired,
+};
 
-export default App;
+export default Card;

@@ -2,6 +2,7 @@ import "./App.css";
 import { Button } from "@mantine/core";
 import { FaDiscord } from "react-icons/fa";
 import Card from "../Components/Common/Card/Card";
+import Footer from "../Components/Common/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         Starify <span>Development</span>
       </h1>
       <Button
+        mt={20}
         variant="gradient"
         leftIcon={<FaDiscord size={24} />}
         radius="md"
@@ -18,7 +20,8 @@ function App() {
       >
         <a href="https://discord.gg/gSj5evjR8S">Discord</a>
       </Button>
-      <Card />
+      <Card path="./snippet.svg" />
+      <Footer />
     </>
   );
 }
