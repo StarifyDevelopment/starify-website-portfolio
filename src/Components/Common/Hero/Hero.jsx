@@ -23,7 +23,7 @@ const Hero = () => {
               <p>Dowiedz się więcej</p>
             </div>
           </a>
-          <a>
+          <a href="https://dc.starify.tech">
             <div className="social-button">
               <SiDiscord size={24} />
             </div>
