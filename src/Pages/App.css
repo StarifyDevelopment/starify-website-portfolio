@@ -1,21 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 1250px;
   text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-  width: 20rem;
-}
-
-h1 span {
-  color: #3b44ff;
-}
-
-a {
-  text-decoration: none;
-  color: white;
+  margin: 0 auto;
+  padding: 2rem 2rem 0 2rem;
+  /* trbl */
 }
 
 html,
@@ -28,15 +16,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+a {
+  text-decoration: none;
+  color: white;
 }

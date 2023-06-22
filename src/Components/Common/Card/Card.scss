@@ -1,9 +1,7 @@
 .card {
-  margin-top: 4rem;
   position: relative;
   width: 660px;
   height: 400px;
-  margin: 4rem 2rem 0 2rem;
   background: radial-gradient(
     90.16% 143.01% at 15.32% 21.04%,
     rgba(165, 239, 255, 0.2) 0%,
@@ -41,22 +39,30 @@
       height: 13.77px;
       border-radius: 50%;
       background-color: #9097a0;
+
+      &:nth-child(1):hover {
+        background-color: #ff7069;
+      }
+      &:nth-child(2):hover {
+        background-color: #fdc347;
+      }
+      &:nth-child(3):hover {
+        background-color: #43c757;
+      }
     }
   }
 }
 
-@media (max-width: 726px) {
+@media (max-width: 1082px) {
   .card {
-    margin-top: 4rem;
     position: relative;
     width: 495px;
     height: 300px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 917px) {
   .card {
-    margin-top: 4rem;
     position: relative;
     width: 372px;
     height: 225px;
