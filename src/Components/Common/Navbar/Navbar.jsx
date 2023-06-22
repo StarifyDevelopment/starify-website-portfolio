@@ -2,6 +2,7 @@ import "./Navbar.scss";
 import { MdSpaceDashboard } from "react-icons/md";
 import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -13,18 +14,21 @@ const Navbar = () => {
         <h4>Starify</h4>
       </div>
       <div className="nav-items">
-        <li>
-          <a href="#home">Główna</a>
-        </li>
-        <li>
-          <a href="#services">Usługi</a>
-        </li>
-        <li>
-          <a href="#realizations">Realizacje</a>
-        </li>
-        <li>
-          <a href="#contact">Kontakt</a>
-        </li>
+        <Link to="/" relative="path">
+          Główna
+        </Link>
+        <Link to="/#services" smooth relative="path">
+          Usługi
+        </Link>
+        <Link to="/#realizations" relative="path">
+          Realizacje
+        </Link>
+        <Link to="/#contact" relative="path">
+          Kontakt
+        </Link>
+        <Link to="/shop" relative="path">
+          Sklep
+        </Link>
       </div>
       <div className="account">
         <a href="https://www.google.com">

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "wwww",
+    "content": "Projektowanie stron",
+    "hightlight": "www",
+    "icon": "/images/websites.svg"
+  },
+  {
+    "id": "configurationserv",
+    "content": "Konfiguracja ",
+    "hightlight": "serwerów",
+    "icon": "/images/servers.svg"
+  },
+  {
+    "id": "configurationdatabase",
+    "content": "Konfiguracja",
+    "hightlight": "baz danych",
+    "icon": "/images/databaseConfiguration.svg"
+  },
+  {
+    "id": "configurationgame",
+    "content": "Konfiguracja",
+    "hightlight": "serwerów gier",
+    "icon": "/images/gameServers.svg"
+  },
+  {
+    "id": "discordbot",
+    "content": "Pisanie botów",
+    "hightlight": "discord",
+    "icon": "/images/discordBots.svg"
+  },
+  {
+    "id": "marketing",
+    "content": "Plany",
+    "hightlight": "marketingowe",
+    "icon": "/images/marketing.svg"
+  },
+  {
+    "id": "pluginsmc",
+    "content": "Pluginy",
+    "hightlight": "minecraft",
+    "icon": "/images/minecraftPlugins.svg"
+  }
+]

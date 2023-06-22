@@ -5,7 +5,7 @@
   align-items: center;
   text-align: left;
   flex-wrap: wrap;
-  margin-top: 10vh;
+  height: calc(100vh - 60px);
 
   .hero-text {
     display: flex;
