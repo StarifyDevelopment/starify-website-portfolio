@@ -68,3 +68,11 @@
     height: 225px;
   }
 }
+
+@media (max-width: 400px) {
+  .card {
+    position: relative;
+    width: 298px;
+    height: 180px;
+  }
+}
