@@ -9,11 +9,11 @@ const Services = () => {
   });
 
   return (
-    <>
+    <div className="services" id="services">
       <h2>
         Czym się <span>zajmujemy</span>?
       </h2>
-      <div className="serviceContainer" id="services">
+      <div className="serviceContainer">
         {services.map((data) => (
           <motion.div
             ref={ref}
@@ -35,7 +35,7 @@ const Services = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
