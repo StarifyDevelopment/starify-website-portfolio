@@ -1,6 +1,7 @@
-import services from "/src/assets/data/services.json";
+import realizations from "/src/assets/data/realizations.json";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { AspectRatio, Image } from "@mantine/core";
 import "./Realizations.scss";
 
 const Realizations = () => {
@@ -11,10 +12,10 @@ const Realizations = () => {
   return (
     <>
       <h2>
-        Czym się <span>zajmujemy</span>?
+        Nasze <span>realizacje</span>
       </h2>
-      <div className="realizationsContainer">
-        {services.map((data) => (
+      <div className="realizationsContainer" id="realizations">
+        {realizations.map((data) => (
           <motion.div
             ref={ref}
             initial={{ opacity: 0 }}
@@ -26,11 +27,21 @@ const Realizations = () => {
             className="realization-card"
           >
             <div className="content">
-              <img src={data.icon} alt={data.content}></img>
-              <h5>
-                {data.content}
-                <span> {data.hightlight}</span>
-              </h5>
+              <AspectRatio ratio={16 / 9}>
+                <Image src={data.image} alt={data.content} />
+              </AspectRatio>
+              <div className="realization-title">
+                <h5>
+                  {data.title}
+                  <span> {data.hightlight}</span>
+                  {data.content}
+                </h5>
+                <a href={data.href}>
+                  <div className="button">
+                    <p>Zobacz</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}

@@ -14,19 +14,16 @@ const Navbar = () => {
         <h4>Starify</h4>
       </div>
       <div className="nav-items">
-        <Link to="/" relative="path">
+        <Link to="/" smooth relative="path">
           Główna
         </Link>
         <Link to="/#services" smooth relative="path">
           Usługi
         </Link>
-        <Link to="/#realizations" relative="path">
+        <Link to="/#realizations" smooth relative="path">
           Realizacje
         </Link>
-        <Link to="/#contact" relative="path">
-          Kontakt
-        </Link>
-        <Link to="/shop" relative="path">
+        <Link to="/shop" smooth relative="path">
           Sklep
         </Link>
       </div>

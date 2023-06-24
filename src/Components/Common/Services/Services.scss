@@ -3,6 +3,7 @@ h2 {
   span {
     background: -webkit-linear-gradient(#5561ff, #3643fc);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -54,57 +55,3 @@ h2 {
     }
   }
 }
-
-@media (max-width: 1056px) {
-  .serviceContainer {
-    gap: 2rem;
-
-    .service-card {
-      width: 12rem;
-      height: 14rem;
-      padding: 1rem;
-      .content {
-        img {
-          width: 5rem;
-          height: 5rem;
-          margin-bottom: 1rem;
-        }
-
-        h5 {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .serviceContainer {
-    gap: 1.5rem;
-
-    .service-card {
-      width: 11rem;
-      height: 13rem;
-      padding: 0.6rem;
-      .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem img {
-          width: 4.5rem;
-          height: 4.5rem;
-        }
-
-        h5 {
-          font-size: 0.9rem;
-          width: 130px;
-        }
-      }
-    }
-  }
-}
-
-// * {
-//   border: 1px solid red;
-// }
