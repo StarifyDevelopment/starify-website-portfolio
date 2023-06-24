@@ -11,15 +11,16 @@
     align-items: center;
     flex-direction: row;
     gap: 1.2rem;
-    font-size: 29px;
 
     h4 {
+      font-size: 34px;
+
       font-weight: 600;
     }
 
     img {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       position: relative;
       bottom: 7px;
     }
@@ -34,8 +35,8 @@
     align-items: center;
     flex-direction: row;
     gap: 1.5rem;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 16px;
 
     a {
       transition: all 0.3s ease;
