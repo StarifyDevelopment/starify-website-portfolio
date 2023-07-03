@@ -1,0 +1,94 @@
+.card {
+  position: relative;
+  width: 660px;
+  height: 400px;
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  background-blend-mode: overlay;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 2px solid #2d3264;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0, 5;
+
+  .snippet {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 75%;
+    height: 75%;
+  }
+
+  .three-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.6rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    .dot {
+      width: 13.77px;
+      height: 13.77px;
+      border-radius: 50%;
+      background-color: #9097a0;
+
+      &:nth-child(1):hover {
+        background-color: #ff7069;
+      }
+      &:nth-child(2):hover {
+        background-color: #fdc347;
+      }
+      &:nth-child(3):hover {
+        background-color: #43c757;
+      }
+    }
+  }
+}
+
+@media (max-width: 1082px) {
+  .card {
+    position: relative;
+    width: 495px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 917px) {
+  .card {
+    position: relative;
+    width: 372px;
+    height: 225px;
+    gap: 0.5rem;
+
+    .three-dots {
+      .dot {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .card {
+    position: relative;
+    width: 298px;
+    height: 180px;
+
+    .three-dots {
+      .dot {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+}

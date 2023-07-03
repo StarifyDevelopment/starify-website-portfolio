@@ -1,0 +1,57 @@
+h2 {
+  font-size: 2rem;
+  span {
+    background: -webkit-linear-gradient(#5561ff, #3643fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.serviceContainer {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  .service-card {
+    position: relative;
+    width: 14rem;
+    height: 16rem;
+    background-blend-mode: overlay;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 2px solid #2d3264;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background: radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(165, 239, 255, 0.2) 0%,
+      rgba(110, 191, 244, 0.0447917) 77.08%,
+      rgba(70, 144, 213, 0) 100%
+    );
+
+    .content {
+      img {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+
+        span {
+          background: -webkit-linear-gradient(#5561ff, #3643fc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

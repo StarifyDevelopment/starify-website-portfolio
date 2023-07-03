@@ -1,0 +1,112 @@
+.navbar {
+  // margin: 2rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  .nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.2rem;
+
+    h4 {
+      font-size: 34px;
+
+      font-weight: 600;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      bottom: 7px;
+    }
+  }
+
+  .nav-items {
+    margin: 0 1rem;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-weight: 400;
+    font-size: 16px;
+
+    a {
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #4450fd;
+      transform: scale(1.15);
+    }
+  }
+
+  .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .button {
+      border-radius: 12px;
+
+      display: flex;
+      padding: 0.75rem 2rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0px 12px 16px 0px rgba(24, 24, 24, 0.3);
+      cursor: pointer;
+      background: var(
+        --primary-button-enabled,
+        linear-gradient(180deg, #5561ff 0%, #3643fc 100%, #3643fc 100%)
+      );
+
+      .icon {
+        font-size: 24px;
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .button:hover {
+      border-radius: 12px;
+      background: linear-gradient(180deg, #6b75ff 0%, #535fff 100%);
+      box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .button:active {
+      border-radius: 12px;
+      background: linear-gradient(180deg, #4b4fa0 0%, #44488b 100%);
+    }
+  }
+}
+
+@media (max-width: 805px) {
+  .navbar {
+    .nav-items {
+      display: none;
+    }
+
+    .account {
+      gap: 1rem;
+      .button {
+        display: none;
+      }
+
+      .burger {
+        display: block;
+      }
+    }
+  }
+}
