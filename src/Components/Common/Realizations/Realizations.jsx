@@ -1,7 +1,6 @@
 import realizations from "/src/assets/data/realizations.json";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { AspectRatio, Image } from "@mantine/core";
 import "./Realizations.scss";
 
 const Realizations = () => {
@@ -27,9 +26,11 @@ const Realizations = () => {
             className="realization-card"
           >
             <div className="content">
-              <AspectRatio ratio={16 / 9}>
-                <Image src={data.image} alt={data.content} />
-              </AspectRatio>
+              <img
+                src={data.image}
+                alt={data.content}
+                className="realization-image"
+              />
               <div className="realization-title">
                 <h5>
                   {data.title}

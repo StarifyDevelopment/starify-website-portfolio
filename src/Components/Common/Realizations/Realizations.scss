@@ -37,6 +37,10 @@ h2 {
     );
 
     .content {
+      .realization-image {
+        width: 21rem;
+      }
+
       .realization-title {
         margin-top: 1rem;
         display: flex;
@@ -62,26 +66,6 @@ h2 {
           cursor: pointer;
         }
 
-        .social-button {
-          display: flex;
-          width: 3rem;
-          height: 3rem;
-          padding: 0.75rem;
-          justify-content: center;
-          align-items: center;
-          flex-shrink: 0;
-          border-radius: 36px;
-          background: #1d1a2c;
-        }
-
-        .social-button:hover {
-          background: #2c2843;
-        }
-
-        .icon {
-          font-size: 24px;
-        }
-
         .button:hover {
           border-radius: 12px;
           background: linear-gradient(180deg, #6b75ff 0%, #535fff 100%);
@@ -103,6 +87,34 @@ h2 {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 482px) {
+  .realizationsContainer {
+    .realization-card {
+      padding: 1rem;
+      .content {
+        .realization-title {
+          gap: 0rem;
+
+          h5 {
+            font-weight: 600;
+            font-size: 0.95rem;
+          }
+          .button {
+            padding: 0.6rem 1.5rem;
+            gap: 0.5rem;
+          }
+          h5 {
+            width: 182px;
+          }
+        }
+        .realization-image {
+          width: 18rem;
         }
       }
     }
