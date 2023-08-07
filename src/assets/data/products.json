@@ -1,0 +1,29 @@
+[
+  {
+    "id": "p-1",
+    "title": "Bot discord",
+    "price": 25,
+    "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
+    "category": "Discord",
+    "image": "/images/products/bot-discord-1/LogoT.png",
+    "bestSeller": true
+  },
+  {
+    "id": "p-1",
+    "title": "Bot discord",
+    "price": 25,
+    "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
+    "category": "Discord",
+    "image": "/images/products/bot-discord-1/LogoT.png",
+    "bestSeller": true
+  },
+  {
+    "id": "p-1",
+    "title": "Bot discord",
+    "price": 25,
+    "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
+    "category": "Discord",
+    "image": "/images/products/bot-discord-1/LogoT.png",
+    "bestSeller": true
+  }
+]

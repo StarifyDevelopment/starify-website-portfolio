@@ -10,7 +10,7 @@ const Realizations = () => {
 
   return (
     <>
-      <h2>
+      <h2 className="h2">
         Nasze <span>realizacje</span>
       </h2>
       <div className="realizationsContainer" id="realizations">
