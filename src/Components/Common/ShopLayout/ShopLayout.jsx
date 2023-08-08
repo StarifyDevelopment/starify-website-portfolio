@@ -1,19 +1,131 @@
-import "./ShopLayout.scss";
+import { useState } from "react";
+import "./ShopLayout.scss"; // Import your ShopLayout styles
 import ProductCard from "../ProductCard/ProductCard";
 import products from "/src/assets/data/products.json";
+import { Select } from "@mantine/core";
 
 const ShopLayout = () => {
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const handleFilter = (category) => {
+    const filtered = products.filter(
+      (product) => category === "" || product.category === category
+    );
+    setFilteredProducts(filtered);
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="container">
-      {/* <h1>Soon</h1>
-    <h4>
-      Sprawdź <a href="https://starify.readyshop.io/">sklep</a>
-    </h4> */}
-      <div className="filters"></div>
+      <div className="filters">
+        <h3>Kategorie</h3>
+        <label>
+          <input
+            type="radio"
+            value=""
+            checked={selectedCategory === ""}
+            onChange={() => handleFilter("")}
+          />
+          Wszystko
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Websites"}
+            onChange={() => handleFilter("Websites")}
+          />
+          Strony
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Minecraft plugins"}
+            onChange={() => handleFilter("Minecraft plugins")}
+          />
+          Pluginy
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Discord bots"}
+            onChange={() => handleFilter("Discord bots")}
+          />
+          Boty discord
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Game servers"}
+            onChange={() => handleFilter("Game servers")}
+          />
+          Serwery gier
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Servers"}
+            onChange={() => handleFilter("Servers")}
+          />
+          Serwery
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Databases"}
+            onChange={() => handleFilter("Databases")}
+          />
+          Bazy danych
+          <span></span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Websites"
+            checked={selectedCategory === "Marketing plans"}
+            onChange={() => handleFilter("Marketing plans")}
+          />
+          Marketing
+          <span></span>
+        </label>
+      </div>
       <div className="content">
-        <div className="sort"></div>
+        <div className="sort">
+          <div className="results">
+            <img src="./images/icons/product.svg" />
+            <p>
+              Liczba wyników: <span>{filteredProducts.length}</span>
+            </p>
+          </div>
+          <div className="sorting">
+            <Select
+              data={[
+                "Sortowanie domyślne",
+                "wg. popularności",
+                "Od najnowszych",
+                "cena - od najniższej",
+                "cena - od najwyższej",
+              ]}
+              defaultValue="Sortowanie domyślne"
+              variant="filled"
+              withAsterisk
+            />
+          </div>
+        </div>
         <div className="products">
-          {products.map((data) => (
+          {filteredProducts.map((data) => (
             <ProductCard
               key={data.id}
               title={data.title}

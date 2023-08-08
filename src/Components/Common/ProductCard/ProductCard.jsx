@@ -14,7 +14,7 @@ const ProductCard = ({ id, title, price, description, category, image }) => {
         <div className="right">
           <h3 className="price">{price}zł</h3>
           <div className="button">
-            <p>Zobacz</p>
+            <p>Szczegóły</p>
           </div>
         </div>
       </div>

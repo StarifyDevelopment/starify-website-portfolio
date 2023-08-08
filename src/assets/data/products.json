@@ -4,25 +4,43 @@
     "title": "Bot discord",
     "price": 25,
     "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
-    "category": "Discord",
+    "category": "Discord bots",
     "image": "/images/products/bot-discord-1/LogoT.png",
     "bestSeller": true
   },
   {
     "id": "p-1",
-    "title": "Bot discord",
+    "title": "Website",
     "price": 25,
     "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
-    "category": "Discord",
+    "category": "Websites",
     "image": "/images/products/bot-discord-1/LogoT.png",
     "bestSeller": true
   },
   {
     "id": "p-1",
-    "title": "Bot discord",
+    "title": "Website",
     "price": 25,
     "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
-    "category": "Discord",
+    "category": "Websites",
+    "image": "/images/products/bot-discord-1/LogoT.png",
+    "bestSeller": true
+  },
+  {
+    "id": "p-1",
+    "title": "Database configuration",
+    "price": 25,
+    "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
+    "category": "Database",
+    "image": "/images/products/bot-discord-1/LogoT.png",
+    "bestSeller": true
+  },
+  {
+    "id": "p-1",
+    "title": "Game server",
+    "price": 25,
+    "description": "Lorem ipsum dolor sit amet elit, consectetur adipiscing elit.",
+    "category": "Game servers",
     "image": "/images/products/bot-discord-1/LogoT.png",
     "bestSeller": true
   }
