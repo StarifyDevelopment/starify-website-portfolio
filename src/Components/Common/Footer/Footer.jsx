@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <p>Copyright 2022. All Rights Reserved</p>
       <div className="logo">
-        <img src="./logo-transparent.png" alt="logo" />
+        <img src="../logo-transparent.png" alt="logo" />
         <h4>Starify</h4>
       </div>
       <p>Email: contact@starify.tech</p>

@@ -1,9 +1,10 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Pages/Home/Home.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
+import ProductPage from "./Pages/Product/ProductPage.jsx";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/shop",
     element: <Shop />,
+  },
+  {
+    path: "/shop/:id",
+    element: <ProductPage />,
   },
 ]);
 

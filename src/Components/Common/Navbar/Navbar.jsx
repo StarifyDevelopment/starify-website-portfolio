@@ -64,7 +64,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src="./logo-transparent.png" alt="logo" />
+        <img src="../logo-transparent.png" alt="logo" />
         <h4>Starify</h4>
       </div>
       <div className="nav-items">
