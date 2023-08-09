@@ -68,6 +68,7 @@
     flex-direction: column;
     gap: 2rem;
 
+
     .sort {
       display: flex;
       flex-direction: row;
@@ -77,6 +78,7 @@
       background-color: #262943;
       border-radius: 20px;
       padding: 1rem 1.5rem;
+      min-width: 65rem;
       width: 100%;
 
       .results {
