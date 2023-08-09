@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./ShopLayout.scss"; // Import your ShopLayout styles
+import { Select } from "@mantine/core";
 import ProductCard from "../ProductCard/ProductCard";
 import products from "/src/assets/data/products.json";
-import { Select } from "@mantine/core";
+import "./ShopLayout.scss";
 
 const ShopLayout = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -147,6 +147,7 @@ const ShopLayout = () => {
           {filteredProducts.map((data) => (
             <ProductCard
               key={data.id}
+              id={data.id}
               title={data.title}
               price={data.price}
               description={data.description}

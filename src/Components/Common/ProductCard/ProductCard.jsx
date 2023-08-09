@@ -14,7 +14,9 @@ const ProductCard = ({ id, title, price, description, category, image }) => {
         <div className="right">
           <h3 className="price">{price}zł</h3>
           <div className="button">
-            <p>Szczegóły</p>
+            <a href={`/shop/${id}`}>
+              <p>Szczegóły</p>
+            </a>
           </div>
         </div>
       </div>
@@ -23,7 +25,7 @@ const ProductCard = ({ id, title, price, description, category, image }) => {
 };
 
 ProductCard.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
