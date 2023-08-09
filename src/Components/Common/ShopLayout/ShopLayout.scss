@@ -78,8 +78,12 @@
       background-color: #262943;
       border-radius: 20px;
       padding: 1rem 1.5rem;
-      min-width: 65rem;
+      min-width: 55rem;
       width: 100%;
+      @media screen and  (max-width: 1282px) {
+        min-width: 1rem;
+        width: 100%;
+       }
 
       .results {
         display: flex;
