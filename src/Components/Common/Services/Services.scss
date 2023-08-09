@@ -117,19 +117,6 @@ h2 {
 
 @media (max-width: 800px) {
   .services {
-    .serviceContainer {
-      .service-card {
-        width: 16rem;
-        height: 8rem;
-
-        .content {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          gap: 0.5rem;
-        }
-      }
-    }
+    display: none !important;
   }
 }
