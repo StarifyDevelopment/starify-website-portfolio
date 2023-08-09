@@ -77,11 +77,16 @@
       display: none;
     }
 
+    .dropdown {
+      display: none;
+    }
+
     .button:hover {
       border-radius: 12px;
       background: linear-gradient(180deg, #6b75ff 0%, #535fff 100%);
       box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.3);
     }
+
 
     .button:active {
       border-radius: 12px;
@@ -95,7 +100,6 @@
     .nav-items {
       display: none;
     }
-
     .account {
       gap: 1rem;
       .button {
