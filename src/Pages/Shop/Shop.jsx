@@ -1,19 +1,20 @@
 import "./Shop.css";
 import NavBar from "../../Components/Common/Navbar/Navbar";
 import Footer from "../../Components/Common/Footer/Footer";
+import ShopLayout from "../../Components/Common/ShopLayout/ShopLayout";
+import { MantineProvider } from "@mantine/core";
 
 function Shop() {
   return (
-    <>
+    <MantineProvider
+      theme={{ colorScheme: "dark" }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
       <NavBar />
-      <div className="container">
-        <h1>Soon</h1>
-        <h4>
-          Sprawdź <a href="https://starify.readyshop.io/">sklep</a>
-        </h4>
-      </div>
+      <ShopLayout />
       <Footer />
-    </>
+    </MantineProvider>
   );
 }
 

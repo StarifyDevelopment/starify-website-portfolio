@@ -1,0 +1,85 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 28rem;
+  background: #262943;
+  border-radius: 20px;
+
+  .content {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    padding: 1.5rem;
+    background-color: #33354a;
+    border-radius: 20px;
+
+    .left {
+      .category {
+        font-weight: 600;
+        font-size: 13px;
+        color: #cacaca;
+      }
+      .title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 28.8px */
+        margin: 0.5rem 0;
+      }
+      .description {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      .button {
+        border-radius: 12px;
+        background: var(
+          --primary-button-enabled,
+          linear-gradient(180deg, #5561ff 0%, #3643fc 100%, #3643fc 100%)
+        );
+        display: flex;
+        padding: 0.75rem 2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 12px 16px 0px rgba(24, 24, 24, 0.3);
+        width: 10rem;
+
+        cursor: pointer;
+      }
+
+      .button:hover {
+        border-radius: 12px;
+        background: linear-gradient(180deg, #6b75ff 0%, #535fff 100%);
+        box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.3);
+      }
+
+      .button:active {
+        border-radius: 12px;
+        background: linear-gradient(180deg, #4b4fa0 0%, #44488b 100%);
+      }
+    }
+  }
+
+  img {
+    width: 18rem;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin: 1rem;
+  }
+}
