@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { MdSpaceDashboard } from "react-icons/md";
 import { useDisclosure } from "@mantine/hooks";
-import { Burger, Transition, Paper, createStyles, rem } from "@mantine/core";
+import { Divider, Drawer, Burger, createStyles, rem, UnstyledButton, Center, Box, ScrollArea, Collapse } from "@mantine/core";
 import { HashLink as Link } from "react-router-hash-link";
 
 
@@ -33,36 +33,47 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
-    display: 'block',
-    lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontWeight: 500,
-
-    '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    },
+    fontSize: theme.fontSizes.sm,
 
     [theme.fn.smallerThan('sm')]: {
-      borderRadius: 0,
-      padding: theme.spacing.md,
+      height: rem(42),
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
     },
+
+    ...theme.fn.hover({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    }),
   },
-  links: {
+
+  hiddenMobile: {
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
   },
+
+  hiddenDesktop: {
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
 }));
 
 
 const Navbar = () => {
-  const [opened, { toggle }] = useDisclosure(false);
-  const label = opened ? "Close navigation" : "Open navigation";
-  const { classes, cx } = useStyles();
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const { classes, theme } = useStyles();
+  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
 
   return (
     <div className="navbar">
@@ -94,27 +105,50 @@ const Navbar = () => {
           </div>
         </a>
         <Burger
-          opened={opened}
-          onClick={toggle}
-          aria-label={label}
-          className="burger"
-          color="#fff"
-        />
-        <Transition transition="pop-top-right" duration={200} mounted={opened}>
-          {(styles) => (
-            <Paper className={classes.dropdown} withBorder style={styles}>
-              <div className={classes.links}>
-                <div className={cx(classes.link,  [classes.linkActive])}>
-                fsdsdsdsdsdsdsdsdsdsdsddsdsd
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+          className={classes.hiddenDesktop}
+                    color="#fff"
+        /> 
+    <Box pb={120}>
 
-                </div>
-              
+     <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="100%"
+        title="Navigation"
+        zIndex={10}
+        className={classes.hiddenDesktop}
+      >
+        <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
 
-              </div>
-              
-            </Paper>
-          )}
-        </Transition>
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+
+          <a href="#" className={classes.link}>
+            Home
+          </a>
+          <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Features
+              </Box>
+              {/* <IconChevronDown size={16} color={theme.fn.primaryColor()} /> */}
+            </Center>
+          </UnstyledButton>
+          <Collapse in={linksOpened}>sd</Collapse>
+          <a href="#" className={classes.link}>
+            Learn
+          </a>
+          <a href="#" className={classes.link}>
+            Academy
+          </a>
+
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+          </ScrollArea>
+
+      </Drawer>
+      </Box>
+
 
       </div>
     </div>
