@@ -7,18 +7,10 @@
 	flex-wrap: wrap;
 	height: calc(100vh - 60px);
 
-<<<<<<< HEAD
 	.hero-text {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-=======
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
->>>>>>> c087e8951020ae450dfe5cb00b8d8aa4d0b57d6b
 
 		.hero-text-title {
 			display: flex;
@@ -105,33 +97,19 @@
 	}
 }
 
-<<<<<<< HEAD
-@media (max-width: 812px) {
+@media (max-width: 805px) {
 	.hero-container {
 		padding-top: 4rem;
 		text-align: center;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
+		height: calc(70vh - 30px);
+
 		gap: 2rem;
 		.hero-text {
 			.hero-text-title {
 				align-items: center;
-=======
-@media (max-width: 805px) {
-  .hero-container {
-    padding-top: 4rem;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: calc(70vh - 30px);
-
-    gap: 2rem;
-    .hero-text {
-      .hero-text-title {
-        align-items: center;
->>>>>>> c087e8951020ae450dfe5cb00b8d8aa4d0b57d6b
 
 				h1 {
 					font-size: 2rem;
