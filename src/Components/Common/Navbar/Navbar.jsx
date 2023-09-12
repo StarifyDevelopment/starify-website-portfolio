@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { MdSpaceDashboard } from "react-icons/md";
 import { useDisclosure } from "@mantine/hooks";
-import { Divider, Drawer, Burger, createStyles, rem, UnstyledButton, Center, Box, ScrollArea, Collapse } from "@mantine/core";
+import { Divider, Drawer, Burger, createStyles, rem, UnstyledButton, Center, Box, MantineProvider, Collapse } from "@mantine/core";
 import { HashLink as Link } from "react-router-hash-link";
 
 
@@ -39,7 +39,7 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    color: theme.colorScheme === 'light' ? theme.white : theme.black,
     fontWeight: 500,
     fontSize: theme.fontSizes.sm,
 
@@ -51,7 +51,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     ...theme.fn.hover({
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'light' ? theme.colors.dark[6] : theme.colors.gray[0],
     }),
   },
 
@@ -75,7 +75,13 @@ const Navbar = () => {
   const { classes, theme } = useStyles();
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
 
+  const handleLinkClick = () => {
+    closeDrawer(); // Funkcja, która zamyka szufladę
+  };
+
   return (
+    <MantineProvider theme={{ colorScheme: 'dark' }} withGlobalStyles withNormalizeCSS>
+
     <div className="navbar">
       <div className="nav-logo">
         <img src="../logo-transparent.png" alt="logo" />
@@ -115,36 +121,27 @@ const Navbar = () => {
      <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
-        size="100%"
-        title="Navigation"
+        size="75%"
+        title="Menu"
         zIndex={10}
-        className={classes.hiddenDesktop}
+        className={classes.dropdown}
+        transitionProps={{ transition: 'rotate-left', duration: 150, timingFunction: 'linear' }}
+        closeOnEscape={true}
       >
-        <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
 
-          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+          <Divider my="sm" color={theme.colorScheme === 'light' ? 'light.5' : 'red.1'} />
 
-          <a href="#" className={classes.link}>
-            Home
+          <a href="#" className={classes.link} onClick={handleLinkClick}>
+          Główna
           </a>
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Features
-              </Box>
-              {/* <IconChevronDown size={16} color={theme.fn.primaryColor()} /> */}
-            </Center>
-          </UnstyledButton>
-          <Collapse in={linksOpened}>sd</Collapse>
-          <a href="#" className={classes.link}>
-            Learn
+          <a href="/#realizations" className={classes.link} onClick={handleLinkClick}>
+          Realizacje
           </a>
-          <a href="#" className={classes.link}>
-            Academy
+          <a href="/shop" className={classes.link} onClick={handleLinkClick}>
+          Sklep
           </a>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-          </ScrollArea>
 
       </Drawer>
       </Box>
@@ -152,6 +149,7 @@ const Navbar = () => {
 
       </div>
     </div>
+    </MantineProvider>
   );
 };
 
