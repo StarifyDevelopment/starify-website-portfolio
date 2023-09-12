@@ -97,15 +97,13 @@
 	}
 }
 
-@media (max-width: 805px) {
+@media (max-width: 812px) {
 	.hero-container {
 		padding-top: 4rem;
 		text-align: center;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		height: calc(70vh - 30px);
-
 		gap: 2rem;
 		.hero-text {
 			.hero-text-title {
