@@ -40,6 +40,7 @@ const useStyles = createStyles((theme) => ({
     paddingRight: theme.spacing.md,
     textDecoration: 'none',
     color: theme.colorScheme === 'light' ? theme.white : theme.black,
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontWeight: 500,
     fontSize: theme.fontSizes.sm,
 
@@ -52,6 +53,8 @@ const useStyles = createStyles((theme) => ({
 
     ...theme.fn.hover({
       backgroundColor: theme.colorScheme === 'light' ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+
     }),
   },
 
