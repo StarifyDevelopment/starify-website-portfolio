@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   height: calc(100vh - 60px);
 
+
   .hero-text {
     display: flex;
     flex-direction: column;
@@ -104,6 +105,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    height: calc(70vh - 30px);
+
     gap: 2rem;
     .hero-text {
       .hero-text-title {
