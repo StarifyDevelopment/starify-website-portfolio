@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { MdSpaceDashboard } from "react-icons/md";
 import { useDisclosure } from "@mantine/hooks";
-import { Divider, Drawer, Burger, createStyles, rem, UnstyledButton, Center, Box, MantineProvider, Collapse } from "@mantine/core";
+import { Divider, Drawer, Burger, createStyles, rem, Box, MantineProvider } from "@mantine/core";
 import { HashLink as Link } from "react-router-hash-link";
 
 
@@ -134,7 +134,7 @@ const Navbar = () => {
 
           <Divider my="sm" color={theme.colorScheme === 'light' ? 'light.5' : 'red.1'} />
 
-          <a href="#" className={classes.link} onClick={handleLinkClick}>
+          <a href="/" className={classes.link}>
           Główna
           </a>
           <a href="/#realizations" className={classes.link} onClick={handleLinkClick}>
