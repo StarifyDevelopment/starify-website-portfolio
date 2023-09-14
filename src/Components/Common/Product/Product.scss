@@ -110,7 +110,6 @@
     text-align: left;
     min-width: 300px;
     border-radius: 20px;
-    width: 100%; // Rozciągnij na całą szerokość ekranu
 
     h2 {
         font-size: 1.2rem;
@@ -121,7 +120,7 @@
         display: flex;
 
         img {
-            width: 7rem;
+            width: 12rem;
             border-radius: 10px;
         }
     }
@@ -129,9 +128,19 @@
 
 // Dodaj media query dla tabletów (szerokość ekranu do 768px)
 @media screen and (max-width: 768px) {
+    .product-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 4rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 0rem 0rem;
+    }
+    
     .product {
 		margin-right: 0px;
-		padding: 0rem 0rem;
 
 
         width: calc(50% - 2rem); // Dla tabletów, 2 produkty na wiersz
@@ -160,53 +169,59 @@
 
 // Dodaj media query dla telefonów (szerokość ekranu do 480px)
 @media screen and (max-width: 480px) {
+    .product-container {
+        display: flex;
+
+        flex-wrap: wrap;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     .product {
-
-
-        width: 100%; // Dla telefonów, 1 produkt na wiersz
-        padding: 2rem; // Zmniejszenie wewnętrznego odstępu
-		.description {
-			text-align: left;
-			width: 300px;
-	
-			h3 {
-				font-weight: 300;
-				
-				margin-bottom: 0.5rem;
-			}
-	
-			p {
-				color: #cacaca;
-				font-size: 15px;
-			}
-		}
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box; /* Dodaj box-sizing, aby padding nie zwiększał szerokości */
     }
 
     .product .product-hero {
-		
-        flex-direction: column; // Układ kolumnowy na mniejszych ekranach
+        flex-direction: column;
         gap: 2rem;
-		img {
-            width: 20rem;
-            border-radius: 10px;
+    }
+
+    .product .product-hero img {
+        width: 60%;
+        border-radius: 10px;
+    }
+
+    .description {
+        text-align: left;
+        width: 100%;
+
+        h3 {
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #cacaca;
+            font-size: 13px;
         }
     }
-	.proposed {
-		background-color: #262943;
-		padding: 3rem;
-		display: flex;
-		flex-direction: column;
-		text-align: left;
-		min-width: 300px;
-		border-radius: 20px;
-		width: 50%; // Rozciągnij na całą szerokość ekranu
-	
-		h2 {
-			font-size: 1.2rem;
-		}
-	}	
 
+    .proposed {
+        background-color: #262943;
+        padding: 3rem;
+        text-align: left;
+        border-radius: 20px;
+        width: 50%;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
 }
+
+
 
 
 
