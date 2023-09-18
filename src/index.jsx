@@ -4,25 +4,30 @@ import ReactDOM from "react-dom/client";
 import Home from "./Pages/Home/Home.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
 import ProductPage from "./Pages/Product/ProductPage.jsx";
+import Rules from "./Pages/Rules/Rules.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/shop",
-    element: <Shop />,
-  },
-  {
-    path: "/shop/:id",
-    element: <ProductPage />,
-  },
+	{
+		path: "/",
+		element: <Home />,
+	},
+	{
+		path: "/shop",
+		element: <Shop />,
+	},
+	{
+		path: "/shop/:id",
+		element: <ProductPage />,
+	},
+	{
+		path: "/rules",
+		element: <Rules />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
