@@ -11,6 +11,7 @@ import {
 	MantineProvider,
 } from "@mantine/core";
 import { HashLink as Link } from "react-router-hash-link";
+import React from "react";
 
 const useStyles = createStyles((theme) => ({
 	root: {

@@ -7,6 +7,7 @@ import {
 	FaDiscord,
 } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
+import React from "react";
 
 const Footer = () => {
 	return (

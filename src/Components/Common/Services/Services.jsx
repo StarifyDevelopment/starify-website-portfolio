@@ -11,8 +11,8 @@ const Services = () => {
   return (
     <div className="services" id="services">
       <h2>
-        Czym się <span>zajmujemy</span>?
-      </h2>
+      What do we <span>do</span>?
+            </h2>
       <div className="serviceContainer">
         {services.map((data) => (
           <motion.div

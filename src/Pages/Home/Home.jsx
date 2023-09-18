@@ -6,6 +6,7 @@ import Services from "../../Components/Common/Services/Services";
 import Realizations from "../../Components/Common/Realizations/Realizations";
 import { MantineProvider } from "@mantine/core";
 
+
 function App() {
   return (
     <>
