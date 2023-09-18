@@ -20,7 +20,7 @@ const Hero = () => {
 					<a href="#services">
 						<div className="button">
 							<AiOutlineInfoCircle className="icon" />
-							<p>Dowiedz się więcej</p>
+							<p>Learn more</p>
 						</div>
 					</a>
 					<a href="https://dc.starify.tech">

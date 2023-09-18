@@ -105,16 +105,13 @@ const Navbar = () => {
 				</div>
 				<div className="nav-items">
 					<Link to="/" smooth relative="path">
-						Główna
+						Main
 					</Link>
 					<Link to="/#services" smooth relative="path">
-						Usługi
+						Services
 					</Link>
 					<Link to="/#realizations" smooth relative="path">
-						Realizacje
-					</Link>
-					<Link to="/shop" smooth relative="path">
-						Sklep
+						Realizations
 					</Link>
 				</div>
 
@@ -153,7 +150,7 @@ const Navbar = () => {
 								onClick={handleLinkClick}
 								className={classes.link}
 							>
-								Główna
+								Main
 							</Link>
 							<Link
 								to="/#realizations"
@@ -162,18 +159,8 @@ const Navbar = () => {
 								onClick={handleLinkClick}
 								className={classes.link}
 							>
-								Realizacje
+								Realizations
 							</Link>
-							<Link
-								to="/shop"
-								smooth
-								relative="path"
-								onClick={handleLinkClick}
-								className={classes.link}
-							>
-								Sklep
-							</Link>
-
 							<Divider
 								my="sm"
 								color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
