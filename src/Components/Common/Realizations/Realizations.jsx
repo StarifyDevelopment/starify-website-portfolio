@@ -11,8 +11,7 @@ const Realizations = () => {
   return (
     <>
       <h2 className="h2">
-        Nasze <span>realizacje</span>
-      </h2>
+      Our <span>achievements</span>      </h2>
       <div className="realizationsContainer" id="realizations">
         {realizations.map((data) => (
           <motion.div

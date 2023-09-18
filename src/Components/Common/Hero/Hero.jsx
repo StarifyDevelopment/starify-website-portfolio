@@ -12,15 +12,14 @@ const Hero = () => {
 						Starify <span>Development</span>
 					</h1>
 					<p>
-						Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-						vulputate libero et velit interdum, ac aliquet odio mattis.
+					Elevate Your Ideas, Illuminate Your Future with Starify Development.
 					</p>
 				</div>
 				<div className="hero-text-buttons">
 					<a href="#services">
 						<div className="button">
 							<AiOutlineInfoCircle className="icon" />
-							<p>Dowiedz się więcej</p>
+							<p>Learn more</p>
 						</div>
 					</a>
 					<a href="https://dc.starify.tech">
