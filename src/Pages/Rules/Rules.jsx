@@ -5,11 +5,7 @@ import Footer from "../../Components/Common/Footer/Footer";
 import React from "react";
 
 function App() {	
-	return (
-		<>
-
-		</>
-	);
+	return window.location.href = '/rules.pdf'
 }
 
 export default App;
