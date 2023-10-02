@@ -7,7 +7,6 @@ import {
 	FaDiscord,
 } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
-import React from "react";
 
 const Footer = () => {
 	return (
@@ -34,14 +33,14 @@ const Footer = () => {
 				</a>
 			</div>
 
-			<p>Copyright 2022. All Rights Reserved</p>
+			<p>Copyright 2022. All Rights Reserved.</p>
 			<div className="logo">
 				<img src="../logo-transparent.png" alt="logo" />
 				<h4>Starify</h4>
 			</div>
 			<p>Email: contact@starify.tech</p>
 			<Link to="/rules" className="link">
-				<p>Starify regulations</p>
+				<p>Starify service regulations</p>
 			</Link>
 		</div>
 	);

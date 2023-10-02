@@ -1,32 +1,32 @@
 [
 	{
 		"id": "wwww",
-		"content": "Design",
-		"hightlight": "www",
+		"content": "Website",
+		"hightlight": "Development",
 		"icon": "/images/services/websites.svg"
 	},
 	{
 		"id": "configurationserv",
-		"content": "Configuration",
-		"hightlight": "servers",
+		"content": "Server",
+		"hightlight": "Configuration",
 		"icon": "/images/services/servers.svg"
 	},
 	{
 		"id": "configurationdatabase",
-		"content": "Configuration",
-		"hightlight": "database",
+		"content": "Database",
+		"hightlight": "Configuration",
 		"icon": "/images/services/databaseConfiguration.svg"
 	},
 	{
 		"id": "configurationgame",
-		"content": "Configuration",
-		"hightlight": "game servers",
+		"content": "Game Servers",
+		"hightlight": "Configuration",
 		"icon": "/images/services/gameServers.svg"
 	},
 	{
 		"id": "discordbot",
-		"content": "Discord",
-		"hightlight": "bot development",
+		"content": "Discord Bot",
+		"hightlight": "Development",
 		"icon": "/images/services/discordBots.svg"
 	},
 	{
@@ -38,7 +38,7 @@
 	{
 		"id": "pluginsmc",
 		"content": "Minecraft",
-		"hightlight": "plugins",
+		"hightlight": "Plugins",
 		"icon": "/images/services/minecraftPlugins.svg"
 	}
 ]

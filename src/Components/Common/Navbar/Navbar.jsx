@@ -11,7 +11,6 @@ import {
 	MantineProvider,
 } from "@mantine/core";
 import { HashLink as Link } from "react-router-hash-link";
-import React from "react";
 
 const useStyles = createStyles((theme) => ({
 	root: {
@@ -47,7 +46,10 @@ const useStyles = createStyles((theme) => ({
 		paddingLeft: theme.spacing.md,
 		paddingRight: theme.spacing.md,
 		textDecoration: "none",
-		color: theme.colorScheme === "light" || theme.colorScheme === "dark" ? theme.white : theme.black,
+		color:
+			theme.colorScheme === "light" || theme.colorScheme === "dark"
+				? theme.white
+				: theme.black,
 		fontWeight: 500,
 		fontSize: theme.fontSizes.sm,
 
@@ -60,11 +62,9 @@ const useStyles = createStyles((theme) => ({
 
 		...theme.fn.hover({
 			backgroundColor:
-			
 				theme.colorScheme === "light" || theme.colorScheme === "dark"
 					? theme.colors.dark[6]
 					: theme.colors.gray[0],
-					
 		}),
 	},
 
@@ -111,9 +111,7 @@ const Navbar = () => {
 					<Link to="/#realizations" smooth relative="path">
 						Realizations
 					</Link>
-					<Link to="/rules">
-					Statute
-					</Link>
+					{/* <Link to="/rules">Regulations</Link> */}
 				</div>
 
 				<div className="account">
@@ -162,14 +160,15 @@ const Navbar = () => {
 							>
 								Realizations
 							</Link>
-							<Link to="/rules"
-			     			smooth
-			      			relative="path"
-					    	onClick={handleLinkClick}
-						   className={classes.link}
+							{/* <Link
+								to="/rules"
+								smooth
+								relative="path"
+								onClick={handleLinkClick}
+								className={classes.link}
 							>
-					          Statute
-					            </Link>
+								Regulations
+							</Link> */}
 							<Divider
 								my="sm"
 								color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}

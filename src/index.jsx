@@ -1,22 +1,33 @@
-import { createBrowserRouter, RouterProvider, Link   } from "react-router-dom";
-import {React, useEffect} from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Pages/Home/Home.jsx";
-import "./index.css";
+import Shop from "./Pages/Shop/Shop.jsx";
+import ProductPage from "./Pages/Product/ProductPage.jsx";
 import Rules from "./Pages/Rules/Rules.jsx";
-
+import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "/rules",
-		element: <Rules/>,
-	  },
-	{
 		path: "/",
 		element: <Home />,
-	}
+	},
+	{
+		path: "/shop",
+		element: <Shop />,
+	},
+	{
+		path: "/shop/:id",
+		element: <ProductPage />,
+	},
+	{
+		path: "/rules",
+		element: <Rules />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
