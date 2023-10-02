@@ -97,10 +97,12 @@ const Navbar = () => {
 			withNormalizeCSS
 		>
 			<div className="navbar">
-				<div className="nav-logo">
-					<img src="../logo-transparent.png" alt="logo" />
-					<h4>Starify</h4>
-				</div>
+				<a href="/">
+					<div className="nav-logo">
+						<img src="../logo-transparent.png" alt="logo" />
+						<h4>Starify</h4>
+					</div>
+				</a>
 				<div className="nav-items">
 					<Link to="/" smooth relative="path">
 						Main
@@ -115,7 +117,7 @@ const Navbar = () => {
 				</div>
 
 				<div className="account">
-					<a href="https://www.google.com">
+					<a href="/">
 						<div className="button">
 							<MdSpaceDashboard className="icon" />
 							<p>Panel</p>
