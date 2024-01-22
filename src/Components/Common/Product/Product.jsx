@@ -1,12 +1,21 @@
 import PropTypes from "prop-types";
 import products from "/src/assets/data/products.json";
 import "./Product.scss";
+import ProductCard from "../ProductCard/ProductCard";
+
+
 
 const Product = ({ id }) => {
+
 	const product = products.find((p) => p.id === id);
+	const filtered = products.filter(
+		(productFilter) => product.category === "" || productFilter.category === product.category
+	).slice(0,2);
+
 	if (!product) {
 		return <div className="not-found">Product not found.</div>;
 	}
+
 
 	return (
 		<div className="product-container">
@@ -41,7 +50,18 @@ const Product = ({ id }) => {
 				<h2>Proponowane</h2>
 				<div className="proposed-products">
 					<div className="proposed-product">
-						<img src="../Banner.png" />
+					{filtered.map((data) => (
+						<ProductCard
+							key={data.id}
+							id={data.id}
+							title={data.title}
+							price={data.price}
+							description={data.description}
+							category={data.category}
+							image={data.image}
+							bestSeller={data.bestSeller}
+						/>
+					))}						
 					</div>
 				</div>
 			</div>
