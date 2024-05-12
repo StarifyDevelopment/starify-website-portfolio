@@ -113,7 +113,7 @@ const Navbar = () => {
 					<Link to="/#realizations" smooth relative="path">
 						Realizations
 					</Link>
-					{/* <Link to="/rules">Regulations</Link> */}
+					<Link to="/shop">Shop</Link>
 				</div>
 
 				<div className="account">
@@ -162,15 +162,15 @@ const Navbar = () => {
 							>
 								Realizations
 							</Link>
-							{/* <Link
-								to="/rules"
+							<Link
+								to="/shop"
 								smooth
 								relative="path"
 								onClick={handleLinkClick}
 								className={classes.link}
 							>
-								Regulations
-							</Link> */}
+								Shop
+							</Link>
 							<Divider
 								my="sm"
 								color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
