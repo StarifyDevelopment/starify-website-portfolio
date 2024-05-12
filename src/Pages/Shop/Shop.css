@@ -7,7 +7,7 @@
 
 html,
 body {
-  background-image: url("https://cdn.discordapp.com/attachments/555763095889379366/1121542955006689420/web-bg2.png");
+  background-image: url("/web-bg2.png");
   position: absolute;
   width: 100%;
   height: 100%;
